@@ -59,11 +59,11 @@ body {
 .header-container {
   z-index: 10;
   width: 100%;
-  height: 10%;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: start;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   top: 0;
 }
@@ -114,44 +114,12 @@ body {
 
 /* main */
 .main-page {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  animation: fadeIn 2s ease-out 3.5s forwards;
   margin: 2rem 0;
-}
-/* Animação com nome */
-#main-page__titulo {
-  text-align: center;
-  font-weight: 800;
-  font-size: 8rem;
-  letter-spacing: 10px;
-  word-spacing: 10px;
-  opacity: 1;
-}
-.page-titulo__part1,
-.page-titulo__part2 {
-  position: absolute;
-  transform: translateY(-50%);
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-.page-titulo__part1 {
-  left: -100%;
-  top: 40%;
-  animation-name: slideFromLeft;
-}
-.page-titulo__part2 {
-  right: -100%;
-  top: 60%;
-  animation-name: slideFromRight;
-}
-.main-photo {
-  width: 100vw;
+  height: 100vh;
 }
 
 /* Frase da página principal */
@@ -160,13 +128,13 @@ body {
   flex-direction: column;
   width: 80%;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 50%;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
-  animation: fadeIn 2s ease-out 3.5s forwards;
+  animation: fadeIn 2s ease-out forwards;
 }
 
 /* seta scroll */
@@ -218,7 +186,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 30vh;
+  height: 20%;
   margin: 5rem 0;
 }
 .gallery__image {
@@ -364,50 +332,6 @@ footer {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
-
-/* animações */
-
-/* correr do lado esquerdo */
-@keyframes slideFromLeft {
-  25% {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  75% {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    left: 50%;
-    transform: translate(100%, -50%);
-  }
-}
-
-/* correr do lado direito */
-
-@keyframes slideFromRight {
-  25% {
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-  50% {
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-  75% {
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-  100% {
-    right: 50%;
-    transform: translate(-100%, -50%);
-  }
-}
-
 /* aparecer lentamente */
 @keyframes fadeIn {
   to {
