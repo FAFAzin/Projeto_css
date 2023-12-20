@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+/* Extra small devices (phones, 600px and down) */
+:root {
+  --main-font: 'Poppins', sans-serif;
+  --color-button: green;
+  /* tamanho páginas */
+  --size-page-width: 100vw;
+  --size-page-heigth: 100%;
+  /* titulo */
+  --color-title: #000000;
+  --font-size-title: 2rem;
+  --margin-title: 5rem 0 2.5rem 0;
+  --text-align-title: center;
+  /* parágrafo */
+  --font-size-paragraph: 1.2rem;
+  --color-paragraph: #000000;
+  --margin-paragraph: -1rem 0;
+  --text-align-paragraph: justify;
+  --width-paragraph: 80%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--main-font);
+  overflow-x: hidden;
+}
+/* Tamanho das páginas*/
+.page {
+  width: var(--size-page-width);
+  height: var(--size-page-heigth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Formatação titulo */
+.title {
+  font-size: var(--font-size-title);
+  color: var(--color-title);
+  text-align: var(--text-align-title);
+  margin: var(--margin-title);
+}
+/* formatação parágrafo */
+.paragraph {
+  width: var(--width-paragraph);
+  font-size: var(--font-size-paragraph);
+  text-align: var(--text-align-paragraph);
+  margin: var(--margin-paragraph);
+  z-index: 3;
+}
+
+/* navbar */
+.header-container {
+  z-index: 10;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+#container-nav {
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+/* botão abrir e fechar menu */
+.menu__actived {
+  display: flex;
+  color: var(--color-button);
+  font-size: 3.5rem;
+  cursor: pointer;
+  outline: none;
+}
+#logo {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: var(--color-logo);
+}
+/* menu fechado inicialmente */
+.nav__menu {
+  display: none;
+  flex-direction: column;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: top 0.3s;
+}
+.nav-menu__item {
+  margin: 1rem 0 1rem 2rem;
+  list-style-type: none;
+  outline: none;
+}
+.nav-menu__link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  outline: none;
+}
+.nav-menu__link:focus {
+  color: darkgray;
+}
+
+/* main */
+.main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 3.5s forwards;
+  margin: 2rem 0;
+}
+/* Animação com nome */
+#main-page__titulo {
+  text-align: center;
+  font-weight: 800;
+  font-size: 8rem;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+  opacity: 1;
+}
+.page-titulo__part1,
+.page-titulo__part2 {
+  position: absolute;
+  transform: translateY(-50%);
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.page-titulo__part1 {
+  left: -100%;
+  top: 40%;
+  animation-name: slideFromLeft;
+}
+.page-titulo__part2 {
+  right: -100%;
+  top: 60%;
+  animation-name: slideFromRight;
+}
+.main-photo {
+  width: 100vw;
+}
+
+/* Frase da página principal */
+.main__phrase {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin-top: 10%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 3.5s forwards;
+}
+
+/* seta scroll */
+.btn-scroll {
+  position: absolute;
+  top: 90%;
+  border: none;
+  transition: 2s;
+  text-decoration: none;
+  color: black;
+  scroll-behavior: smooth;
+}
+.down {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+  animation: arrowDown 5s ease-in-out 5s infinite;
+  outline: none;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+}
+
+/* Serviços */
+.service {
+  width: 100vw;
+  height: 100%;
+}
+.gallery {
+  width: 100vw;
+  height: 100%;
+}
+.service__presentation {
+  margin-top: 1rem;
+}
+/* card arte */
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  margin: 5rem 0;
+}
+.gallery__image {
+  width: inherit;
+  height: inherit;
+}
+.gallery__descrition-item {
+  width: 90%;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.proposal {
+  margin-top: 5rem;
+}
+
+/* contato */
+form {
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-label {
+  display: block;
+  margin: 1rem 0 0.3rem 0;
+}
+.form-input,
+.form-select {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+}
+.form-textarea {
+  background-color: white;
+  border: 1px solid black;
+}
+.form-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.label-checkbox {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.btn {
+  margin: 2rem 0;
+  padding: 1rem 5rem;
+  background-color: var(--color-button);
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  margin-top: 5%;
+  background-color: rgb(0, 89, 0);
+  color: white;
+}
+.name-crativ {
+  font-size: 2rem;
+  font-weight: 800;
+}
+/* animações */
+
+/* correr do lado esquerdo */
+@keyframes slideFromLeft {
+  25% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 50%;
+    transform: translate(100%, -50%);
+  }
+}
+
+/* correr do lado direito */
+
+@keyframes slideFromRight {
+  25% {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  50% {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  75% {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  100% {
+    right: 50%;
+    transform: translate(-100%, -50%);
+  }
+}
+
+/* aparecer lentamente */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mover a seta para cima e para baixo */
+@keyframes arrowDown {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-0px);
+  }
+}
+to {
+  transform: translateY(-50%);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
