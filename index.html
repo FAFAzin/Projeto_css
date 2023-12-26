@@ -3,233 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Se você precisa de uma identidade visual para o seu negócio, entre em contato com a Crativ. Somos a melhor solução para o seu negócio!"
+    />
+    <meta property="og:title" content="Crativ" />
+    <meta
+      property="og:description"
+      content="Se você precisa de uma identidade visual para o seu negócio, entre em contato com a Crativ. Somos a melhor solução para o seu negócio!"
+    />
+    <meta property="og:image" content="crativ.com.br" />
+    <meta property="og:url" content="https://crativ.com.br/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./icons/C.png" type="image/png" />
+
+    <!-- Font wasome import -->
     <script
       src="https://kit.fontawesome.com/8097664c40.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Style -->
     <link rel="stylesheet" href="style.css" />
     <title>Crativ</title>
   </head>
   <body>
     <!-- header -->
-    <header class="header-container">
-      <nav id="container-nav">
-        <img
-          id="logo"
-          src="./img/logo-peb.svg"
-          alt="a logo crativ preta a branca"
-        />
-        <ul class="nav__menu">
-          <li class="nav-menu__item">
-            <a href="#home" class="nav-menu__link">Inicio</a>
+    <header id="header">
+      <nav id="nav">
+        <a href="#inicio">
+          <img
+            id="logo"
+            src="./icons/logo-original.svg"
+            alt="Logo crativ preta a branca"
+          />
+        </a>
+        <ul id="nav__menu">
+          <li class="item">
+            <a href="#inicio" class="nav__menu-link">Inicio</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#about" class="nav-menu__link">Sobre</a>
+          <li class="item">
+            <a href="#sobre" class="nav__menu-link">Sobre</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#service" class="nav-menu__link">Serviço</a>
+          <li class="item">
+            <a href="#galeria" class="nav__menu-link">Galeria</a>
           </li>
-          <li class="nav-menu__item">
-            <a href="#proposal" class="nav-menu__link">Proposta</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#contact" class="nav-menu__link">Contato</a>
+          <li class="item">
+            <a href="#contato" class="nav__menu-link">Contato</a>
           </li>
         </ul>
         <!-- Botão abrir menu -->
-        <a>
-          <i class="fa-solid fa-circle-plus menu__actived"></i>
+        <a id="button__menu">
+          <i class="fa-solid fa-circle-plus"></i>
         </a>
       </nav>
     </header>
     <!-- main -->
-    <main class="main-container">
-      <!-- Primeira página -->
-      <section class="main-page" id="home">
+    <main id="main">
+      <!-- Página inicial -->
+      <section id="inicio">
+        <!-- retangles -->
+        <div id="retangle-rigth">
+          <img src="./img/Rectangle.svg" />
+        </div>
+        <div id="retangle-left">
+          <img src="./img/Rectangle.svg" />
+        </div>
         <!-- parágrafo do inicio -->
-        <p class="main__phrase">
-          Desvende o extraordinário: onde o design inovador e singular
-          transforma visões em realidade.
+        <p id="presentatio-paragraph">
+          Onde o design inovador e singular transforma visões em realidade..
         </p>
-        <a class="btn-scroll" href="#about">
-          <i class="fa-solid fa-angle-down down"></i>
+        <!-- botão scroll -->
+        <a id="btn-scroll" href="#sobre">
+          <img src="./icons/Ellipse-scroll.svg" />
+          <img src="./icons/Arrow-scroll.svg" id="down" />
         </a>
       </section>
-      <!-- sobre  -->
-      <section class="about page" id="about">
-        <h1 class="title">Sobre nós</h1>
-        <p class="about__crative-presentation paragraph">
-          Capturamos a atenção das pessoas com um estratégia infalível, o
-          diferente.
-        </p>
+      <!-- Página sobre  -->
+      <section id="sobre">
+        <h1 class="title">Sobre</h1>
         <!-- gif da página sobre -->
         <img
-          class="about__image"
-          src="./img/imagem-about.gif"
+          id="about-image"
+          src="./img/about-image.png"
           alt="Gato preto pulando pegando uma bolinha"
         />
-        <p class="about__crative-presentation paragraph">
-          Vamos além de um design bonito, trazemos um design inovador e coerente
-          com seu público. A criatividade está em nosso nome.
-        </p>
+        <div class="container__paragraph">
+          <p class="paragraph">
+            Capturamos a atenção das pessoas com uma estratégia infalível,
+            hipnose. Assim como um gato não resiste a uma bola de linha de
+            tricô, seus clientes perderão a nossa do tempo ao acessar seu site e
+            se surpreender com tanta criatividade. A diferença não é o
+            suficiente para se destacar, é preciso ir além do que se pode
+            imaginar. Nós vamos além por você.
+          </p>
+        </div>
       </section>
-      <!-- Serviço -->
-      <section class="service page" id="service">
-        <h1 class="title">Nossos Serviços</h1>
-        <img class="service__image" src="" alt="" />
-        <p class="service__presentation paragraph">
-          Temos um processo criativo robusto com profissionais super
-          qualificados na área. A criatividade é o que nos move, veja nossa
-          galeria de obras primas.
-        </p>
+      <!-- Página galeria -->
+      <section id="galeria">
+        <h1 class="title">Galeria</h1>
+        <div class="container__paragraph">
+          <p class="paragraph">
+            Estes são alguns exemplos de nossos serviços e eu já posso adivinhar
+            uma coisa, você não está esperando tanta criatividade. Mas se
+            surpreenda, perceba que cada detalhe faz sentido em todas as logos
+            que já criamos.
+          </p>
+        </div>
         <!-- galeria de artes -->
-        <section class="gallery">
-          <ul>
+        <section id="gallery__itens">
+          <ul id="container__gallery">
             <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art1-gallery.jpg"
-                  alt="disco voador que solta ovos"
+                  src="./img/art-balão 1.png"
+                  alt="Logo profissional balloons"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Omelet Game Studio - a maior de todas
+                  Sua festa fica melhor com balões.
                 </figcaption>
               </figure>
             </li>
-            <li class="gallery__item">
+            <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art2-gallery.jpg"
-                  alt=""
+                  src="./img/art-clean 1.png"
+                  alt="Logo Profissional Clean"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Open - Sua amiga nos momentos difíceis, sempre open.
+                  Não se preocupe com a limpeza, a Clean resolve!
                 </figcaption>
               </figure>
             </li>
-            <li class="gallery__item">
+            <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art3-gallery..jpg"
-                  alt=""
+                  src="./img/art-image 1.png"
+                  alt="Logo profissional fashion"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Tekni - Automatize sua casa, tenha tekni.
+                  Use fashion, seja fashion.
                 </figcaption>
               </figure>
             </li>
-            <li class="gallery__item">
+            <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art4-gallery..jpg"
-                  alt=""
+                  src="./img/art-panda 1.png"
+                  alt="Logo profissional panda"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Pixel - Onde toda a arte de baseia em pixels
+                  É preto e branco, é fofo e parece um urso. Contrate pandas.
                 </figcaption>
               </figure>
             </li>
-            <li class="gallery__item">
+            <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art5-gallery.jpg"
-                  alt=""
+                  src="./img/art-pizza 1.png"
+                  alt="Logo profissional pizza"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Goat - Sempre pronta para entregar o maior conforto.
+                  Uma fatia já é o suficiente, mas você vai querer mais.
                 </figcaption>
               </figure>
             </li>
-            <li class="gallery__item">
+            <li>
               <figure class="gallery__item">
                 <img
                   class="gallery__image"
-                  src="./img/art8-gallery.jpg"
-                  alt=""
+                  src="./img/art-shot 1.png"
+                  alt="Logo profissional Shot"
                 />
                 <figcaption class="gallery__descrition-item paragraph">
-                  Cub - Muito mais, muito além, é Cub.
+                  Shot, o flash para quem merece.
                 </figcaption>
               </figure>
             </li>
           </ul>
         </section>
       </section>
-      <!-- página de apresentação do serviço -->
-      <section class="proposal page" id="proposal">
-        <h1 class="title">É uma promessa</h1>
-        <img class="proposal__image" src="" alt="" />
-        <p class="proposal__presentation-proposal paragraph">
-          Com mais de vinte anos entregando um design inovador e usando a
-          criatividade para diferenciar nossos mais de cem mil clientes de toda
-          a massa, temos o compromisso de levar o seu negócio à uma visão mais
-          próxima do seu cliente, mais interessante e original. Faça parte desse
-          grupo, seja <strong>Crativ</strong>.
-        </p>
-      </section>
-      <section class="contact page" id="contact">
+      <!-- Página contact -->
+      <section id="contato">
         <h1 class="title">Contate-nos</h1>
+        <div class="container__paragraph">
+          <p class="paragraph">
+            Com mais de vinte anos entregando um design inovador e usando a
+            criatividade para diferenciar nossos mais de cem mil clientes de
+            toda a massa, temos o compromisso de levar o seu negócio a uma visão
+            mais próxima do seu cliente, mais interessante e original. Faça
+            parte desse grupo, seja <strong>Crativ</strong>
+          </p>
+        </div>
         <form action="#">
-          <label class="form-label" for="name">Nome</label>
+          <label for="name">Nome</label>
           <input
-            class="form-input"
             type="text"
             name="name"
             id="name"
             placeholder="Nome Sobrenome"
           />
 
-          <label class="form-label" for="email">Email</label>
+          <label for="email">Email</label>
           <input
-            class="form-input"
             type="email"
             name="email"
             id="email"
             placeholder="exemplo@rmail.com"
           />
 
-          <label class="form-label" for="services">Serviço</label>
-          <select name="services" id="services" class="form-select">
+          <label for="services">Serviço</label>
+          <select name="services" id="services">
             <option value="design">Criação de logo</option>
             <option value="identidade-visual">Identidade Visual</option>
             <option value="arte-animada">Arte animada</option>
             <option value="re-branding">Rebranding</option>
           </select>
 
-          <label class="form-label" for="textarea"
-            >Informações adicionais</label
-          >
+          <label for="textarea">Informações adicionais</label>
           <textarea
-            class="textarea"
             name="textarea"
-            id="textarea"
             cols="30"
-            rows="10"
+            rows="5"
             placeholder="Informações adicionais"
           ></textarea>
           <div class="form-checkbox">
-            <label for="checkbox" class="label-checkbox"
+            <label for="checkbox"
               >Confirmo que li e aceitos os termos de crativ</label
             >
-            <input
-              type="checkbox"
-              name="checkbox"
-              id="checkbox"
-              class="checkbox"
-            />
+            <input type="checkbox" name="checkbox" />
           </div>
+          <button class="btn">
+            Enviar
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
         </form>
-        <button class="btn">Contactar</button>
       </section>
     </main>
     <footer>
-      <div class="local"><p>Brasil - Rio de janeiro</p></div>
-      <div class="name-crativ">Crativ</div>
+      <div>
+        <ul class="container-footer">
+          <li>Serviços</li>
+          <li>Trabalhe Conosco</li>
+          <li>Diretrizes</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="container-footer">
+          <li>Redes Sociais</li>
+          <li>Premiações</li>
+          <li>Nossos Profissionais</li>
+        </ul>
+      </div>
     </footer>
     <script src="./js/index.js"></script>
   </body>
