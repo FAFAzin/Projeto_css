@@ -91,9 +91,11 @@ header {
   color: var(--color-background-button);
   cursor: pointer;
   margin-top: -0.5rem;
+  margin-right: -0.7rem;
 }
 #logo {
   margin: 1rem 0 0 1rem;
+  width: 100%;
 }
 
 /* menu fechado inicialmente */
