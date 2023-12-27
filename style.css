@@ -110,7 +110,7 @@ header {
 
 #nav__menu li {
   list-style-type: none;
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 1rem 0;
   outline: none;
 }
 .nav__menu-link {
