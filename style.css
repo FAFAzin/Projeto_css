@@ -87,12 +87,13 @@ header {
 }
 /* botão abrir e fechar menu */
 #button__menu {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--color-background-button);
   cursor: pointer;
+  margin-top: -0.5rem;
 }
 #logo {
-  margin: 0.5rem 0 0 1rem;
+  margin: 1rem 0 0 1rem;
 }
 
 /* menu fechado inicialmente */
@@ -122,6 +123,7 @@ header {
 }
 
 /* ========== Pages =========== */
+
 /* home page */
 #inicio {
   display: flex;
@@ -145,21 +147,20 @@ header {
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
-  animation: fadeIn 2s ease-out forwards;
+  animation: fadeIn 3s ease-out forwards;
 }
 
 /* Retangles */
 #retangle-rigth {
   position: absolute;
-  right: -12rem;
-  top: 10rem;
-  animation: slideLeftToRight 1s ease-out;
+  right: 0;
+  animation: floatAnimation 7s ease-in-out infinite;
 }
 #retangle-left {
   position: absolute;
-  left: -18rem;
-  top: 17rem;
-  animation: slideRightToLeft 1s ease-out;
+  left: 0;
+  top: 25rem;
+  animation: floatAnimation 4s ease-in-out infinite;
 }
 
 /* seta scroll */
@@ -270,6 +271,7 @@ select {
   border: none;
   border-radius: 0.2rem;
   color: grey;
+  font-size: 1.2rem;
 }
 textarea {
   background-color: white;
@@ -307,7 +309,7 @@ footer {
   margin-top: 3rem;
   padding: 1rem 2rem;
   background-color: #f9bc60;
-  border-radius: 2rem 0 1rem 0;
+  border-radius: 3rem 0 0 0;
 }
 .container-footer {
   justify-content: center;
@@ -707,4 +709,16 @@ footer {
 }
 to {
   transform: translateY(-50%);
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /* Ajuste a altura da flutuação conforme necessário */
+  }
 }
