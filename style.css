@@ -87,10 +87,9 @@ header {
 }
 /* botão abrir e fechar menu */
 #button__menu {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--color-background-button);
   cursor: pointer;
-  margin-top: -0.5rem;
   margin-right: -0.7rem;
 }
 #logo {
