@@ -7,17 +7,18 @@
   --global-color-text: #ffffff;
   --global-backgound-color: #004643;
 
+  /* Container config */
+  --container-width: 100vw;
+  --container-heigth: 100vh;
+
   /* button config */
   --color-background-button: #f9bc60;
   --size-button: 5rem;
   --padding-button: 2.5rem;
 
-  /* config páginas - flexbox */
-  --size-page-width: 100vw;
-  --size-page-heigth: 100%;
-
-  /* config-title-mobile-and-desktop */
+  /* title config*/
   --font-size-title-mobile: 2rem;
+  --tablet-fon-size: 3rem;
   --font-size-title-desktop: 4rem;
   --margin-title-mobile: 5rem 0 2.5rem 0;
   --margin-title-desktop: 7rem 0 4.5rem 0;
@@ -26,6 +27,8 @@
   /* config-paragraph-mobile-and-desktop */
   --font-size-paragraph-mobile: 1.2rem;
   --font-size-paragraph-desktop: 1.6rem;
+  --tablet-size-paragraph: 1.3rem;
+  --tablet-width-paragraph: 85%;
   --width-paragraph-mobile: 90%;
   --margin-paragraph-mobile: 1rem 0;
   --text-align-paragraph: justify;
@@ -33,6 +36,7 @@
   /* config card */
   --card-background-color: #ffffff;
   --color-text-card: #000000;
+  --tablet-size-card: 40%;
 
   /* config form */
   --form-background-color: #e16162;
@@ -200,7 +204,7 @@ header {
   margin: 0.5rem 0;
 }
 
-/* Serviços */
+/* Galeria */
 #galeria {
   height: 100%;
   display: flex;
@@ -328,161 +332,101 @@ footer {
   scale: 1.1;
   transition: 0.5s;
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .container {
+    width: var(--container-width);
+    height: var(--container-heigth);
+  }
   .title {
-    font-size: var(--font-size-title-600px);
-    color: var(--color-title);
-    text-align: var(--text-align-title);
-    margin: var(--margin-title-600px);
+    font-size: var(--tablet-fon-size);
   }
   /* paragraph */
   .paragraph {
-    width: var(--width-paragraph);
-    font-size: var(--font-size-paragraph);
+    width: var(--tablet-width-paragraph);
+    font-size: var(--tablet-size-paragraph);
     text-align: var(--text-align-paragraph);
-    margin: var(--margin-paragraph);
-    z-index: 3;
   }
-  /* Logo */
-  #logo {
-    width: 8rem;
-  }
-  /* botão menu */
-  .menu__actived {
-    display: flex;
-    color: var(--color-button);
-    font-size: 4rem;
+  /* botão abrir e fechar menu */
+  #button__menu {
+    font-size: 3rem;
+    color: var(--color-background-button);
     cursor: pointer;
-    outline: none;
+    margin-right: -3rem;
   }
-  /* titulo principal */
-  #main-page__titulo {
-    text-align: center;
-    font-weight: 800;
-    font-size: 13rem;
-    letter-spacing: 10px;
-    opacity: 1;
+  #presentatio-paragraph {
+    margin-top: 60%;
+    font-size: 2rem;
   }
-  /* foto principal */
-  .main-photo {
-    width: 90vw;
+  /* Sobre */
+  #about-image {
+    width: 45%;
   }
-  /* frase principal */
-  .main__phrase {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 100%;
-    margin-top: 50%;
-    font-size: 1.8rem;
-  }
-
-  /* serviços e galeria de artes */
-  .gallery__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* Galeria */
+  #container__gallery {
     width: 100vw;
-    height: 25%;
-    margin: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
   }
-  /* Descrição artes */
+  #container__gallery li {
+    width: var(--tablet-size-card);
+    margin: 0 0;
+  }
   .gallery__descrition-item {
-    width: 80%;
-    font-size: 1.5rem;
-    padding-top: 2rem;
+    width: 90%;
+    height: 3rem;
+    font-size: 1rem;
+    padding-top: 0.1rem;
+  }
+  /* contato */
+  #contato {
+    height: 100%;
+  }
+  form {
+    width: 85%;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+  }
+  label {
+    margin: 1rem 0 0.3rem 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  input,
+  select {
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+  }
+  textarea {
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .form-checkbox {
+    padding: 1rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .btn:hover {
+    scale: 1.05;
+    background-color: #004643e3;
+  }
+  /* Footer */
+  footer {
+    padding: 1rem 3.5rem;
+  }
+  .container-footer li {
+    font-size: 1.1rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .title {
-    font-size: 4rem;
-  }
-  /* paragraph */
-  .paragraph {
-    font-size: 1.5rem;
-  }
-
-  /* navbar */
-  #container-nav {
-    padding: 1rem 1rem;
-  }
-  .nav-menu__link {
-    font-size: 3rem;
-  }
-  /* Logo */
-  #logo {
-    width: 10rem;
-  }
-  /* botão menu */
-  .menu__actived {
-    font-size: 5rem;
-  }
-
-  /* Frase da página principal */
-  .main__phrase {
-    font-size: 2rem;
-  }
-  .down {
-    font-size: 2rem;
-  }
-  .about__image {
-    width: 90%;
-    height: auto;
-  }
-  .gallery__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    margin: 2rem 0;
-  }
-  .gallery__image {
-    margin-top: 3rem;
-    width: 80%;
-    height: inherit;
-  }
-  .form-label {
-    display: block;
-    margin: 1rem 0 0.3rem 0;
-    font-size: 1.5rem;
-  }
-  .form-input,
-  .form-select {
-    padding: 1.5rem;
-    background-color: white;
-    border: 1px solid black;
-  }
-  .form-checkbox {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  .label-checkbox {
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-  }
-  .checkbox {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .btn {
-    display: flex;
-    z-index: 4;
-    margin: 4rem 0;
-    padding: 2rem 7rem;
-    background-color: green;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 800;
-    border: none;
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
