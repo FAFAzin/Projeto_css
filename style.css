@@ -39,8 +39,8 @@
   --tablet-size-card: 40%;
 
   /* config form */
-  --form-background-color: #e16162;
-  --form-color-font: #ffffff;
+  --form-background-color: #f9bc60;
+  --form-color-font: #004643;
   --form-button-background: #004643;
 }
 * {
@@ -94,7 +94,7 @@ header {
   font-size: 3rem;
   color: var(--color-background-button);
   cursor: pointer;
-  margin-right: -0.7rem;
+  margin-right: -2rem;
 }
 #logo {
   margin: 0.4rem 0 0 1rem;
@@ -272,18 +272,19 @@ label {
 input,
 select {
   padding: 1rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.563);
   border: none;
   border-radius: 0.2rem;
-  color: grey;
+  color: #000000;
   font-size: 1.2rem;
 }
 textarea {
-  background-color: white;
-  color: var(--global-color-text);
+  background-color: rgba(255, 255, 255, 0.57);
+  color: #000000;
   border: none;
   border-radius: 0.2rem;
   padding: 1rem;
+  font-size: 1.2rem;
 }
 .form-checkbox {
   display: flex;
