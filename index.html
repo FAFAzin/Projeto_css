@@ -29,6 +29,7 @@
   <body>
     <!-- header -->
     <header id="header">
+      <a href="#" id="cliente-button">sou cliente</a>
       <nav id="nav">
         <a href="#inicio">
           <img
@@ -37,40 +38,62 @@
             alt="Logo crativ preta a branca"
           />
         </a>
-        <ul id="nav__menu">
-          <li class="item">
-            <a href="#inicio" class="nav__menu-link">Inicio</a>
-          </li>
-          <li class="item">
-            <a href="#sobre" class="nav__menu-link">Sobre</a>
-          </li>
-          <li class="item">
-            <a href="#galeria" class="nav__menu-link">Galeria</a>
-          </li>
-          <li class="item">
-            <a href="#contato" class="nav__menu-link">Contato</a>
-          </li>
-        </ul>
         <!-- Botão abrir menu -->
         <a id="button__menu">
-          <i class="fa-solid fa-circle-plus"></i>
+          <img src="./icons/icon-button.svg" alt="botão menu" />
         </a>
+        <ul id="nav__menu">
+          <li class="item">
+            <a href="#inicio" class="nav__menu-link">INICIO</a>
+          </li>
+          <li class="item">
+            <a href="#sobre" class="nav__menu-link">SOBRE</a>
+          </li>
+          <li class="item">
+            <a href="#galeria" class="nav__menu-link">GALERIA</a>
+          </li>
+          <li class="item">
+            <a href="#contato" class="nav__menu-link">CONTATO</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <!-- main -->
     <main id="main">
       <!-- Página inicial -->
       <section id="inicio" class="container">
-        <!-- retangles -->
-        <div id="retangle-left">
-          <img src="./img/ret1.svg" />
-        </div>
-        <div id="retangle-rigth">
-          <img src="./img/ret2.svg" />
-        </div>
+        <!-- Imagem background -->
+        <picture>
+          <!-- Imagem para telas pequenas (max-width: 599px) -->
+          <source
+            class="bg-inicio"
+            media="(max-width: 599px)"
+            srcset="./img/bg-mobile-p1.svg"
+          />
+
+          <!-- Imagem para telas médias (min-width: 600px) e grandes (min-width: 1200px) -->
+          <source
+            class="bg-inicio"
+            media="(max-width: 991px)"
+            srcset="./img/bg-tablet-p1.svg"
+          />
+          <source
+            class="bg-inicio"
+            media="(max-width: 1200px)"
+            srcset="./img/bg-desktop-p1.svg"
+          />
+          <source
+            class="bg-inicio"
+            media="(min-width: 1200px)"
+            srcset="./img/bg-large-desktop-p1.svg"
+          />
+
+          <!-- Fallback para navegadores que não suportam a tag picture -->
+          <img src="./img/bg-mobile-p1" alt="Circulos coloridos ofuscados" />
+        </picture>
         <!-- parágrafo do inicio -->
         <p id="presentatio-paragraph">
-          Onde o design inovador e singular transforma visões em realidade..
+          Onde o design inovador e singular transforma visões em realidade.
         </p>
         <!-- botão scroll -->
         <a id="btn-scroll" href="#sobre">
@@ -80,14 +103,13 @@
       </section>
       <!-- Página sobre  -->
       <section id="sobre" class="container">
-        <h1 class="title">Sobre</h1>
         <!-- gif da página sobre -->
-        <img
-          id="about-image"
-          src="./img/about-image.png"
-          alt="Gato preto pulando pegando uma bolinha"
-        />
-        <div class="container__paragraph">
+        <div id="container-sobre">
+          <img
+            id="about-image"
+            src="./img/gif-sobre.gif"
+            alt="Gato preto pulando pegando uma bolinha"
+          />
           <p class="paragraph">
             Capturamos a atenção das pessoas com uma estratégia infalível,
             hipnose. Assim como um gato não resiste a uma bola de linha de
@@ -100,42 +122,15 @@
       </section>
       <!-- Página galeria -->
       <section id="galeria">
-        <h1 class="title">Galeria</h1>
-        <div class="container__paragraph">
+        <!-- galeria de artes -->
+        <section id="gallery__itens">
           <p class="paragraph">
             Estes são alguns exemplos de nossos serviços e eu já posso adivinhar
             uma coisa, você não está esperando tanta criatividade. Mas se
             surpreenda, perceba que cada detalhe faz sentido em todas as logos
             que já criamos.
           </p>
-        </div>
-        <!-- galeria de artes -->
-        <section id="gallery__itens">
           <ul id="container__gallery">
-            <li>
-              <figure class="gallery__item">
-                <img
-                  class="gallery__image"
-                  src="./img/art-balão 1.png"
-                  alt="Logo profissional balloons"
-                />
-                <figcaption class="gallery__descrition-item paragraph">
-                  Sua festa fica melhor com balões.
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <figure class="gallery__item">
-                <img
-                  class="gallery__image"
-                  src="./img/art-clean 1.png"
-                  alt="Logo Profissional Clean"
-                />
-                <figcaption class="gallery__descrition-item paragraph">
-                  Não se preocupe com a limpeza, a Clean resolve!
-                </figcaption>
-              </figure>
-            </li>
             <li>
               <figure class="gallery__item">
                 <img
@@ -143,9 +138,6 @@
                   src="./img/art-image 1.png"
                   alt="Logo profissional fashion"
                 />
-                <figcaption class="gallery__descrition-item paragraph">
-                  Use fashion, seja fashion.
-                </figcaption>
               </figure>
             </li>
             <li>
@@ -155,9 +147,6 @@
                   src="./img/art-panda 1.png"
                   alt="Logo profissional panda"
                 />
-                <figcaption class="gallery__descrition-item paragraph">
-                  É preto e branco, é fofo e parece um urso. Contrate pandas.
-                </figcaption>
               </figure>
             </li>
             <li>
@@ -167,9 +156,6 @@
                   src="./img/art-pizza 1.png"
                   alt="Logo profissional pizza"
                 />
-                <figcaption class="gallery__descrition-item paragraph">
-                  Uma fatia já é o suficiente, mas você vai querer mais.
-                </figcaption>
               </figure>
             </li>
             <li>
@@ -179,9 +165,6 @@
                   src="./img/art-shot 1.png"
                   alt="Logo profissional Shot"
                 />
-                <figcaption class="gallery__descrition-item paragraph">
-                  Shot, o flash para quem merece.
-                </figcaption>
               </figure>
             </li>
           </ul>
@@ -189,16 +172,13 @@
       </section>
       <!-- Página contact -->
       <section id="contato" class="container">
-        <h1 class="title">Contate-nos</h1>
-        <div class="container__paragraph">
-          <p class="paragraph">
-            Com mais de vinte anos entregando um design inovador e usando a
-            criatividade para diferenciar nossos mais de cem mil clientes de
-            toda a massa, temos o compromisso de levar o seu negócio a uma visão
-            mais próxima do seu cliente, mais interessante e original. Faça
-            parte desse grupo, seja <strong>Crativ</strong>
-          </p>
-        </div>
+        <p class="paragraph">
+          Com mais de vinte anos entregando um design inovador e usando a
+          criatividade para diferenciar nossos mais de cem mil clientes de toda
+          a massa, temos o compromisso de levar o seu negócio a uma visão mais
+          próxima do seu cliente, mais interessante e original. Faça parte desse
+          grupo, seja <strong>Crativ</strong>
+        </p>
         <form action="#">
           <label for="name">Nome</label>
           <input
@@ -244,7 +224,7 @@
         </form>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <div>
         <ul class="container-footer">
           <li>Serviços</li>
