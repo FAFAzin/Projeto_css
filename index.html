@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Crativ</title>
   </head>
-  <body>
+  <body id="body">
     <!-- header -->
     <header id="header">
       <a href="#" id="cliente-button">sou cliente</a>
@@ -61,36 +61,7 @@
     <!-- main -->
     <main id="main">
       <!-- Página inicial -->
-      <section id="inicio" class="container">
-        <!-- Imagem background -->
-        <picture>
-          <!-- Imagem para telas pequenas (max-width: 599px) -->
-          <source
-            class="bg-inicio"
-            media="(max-width: 599px)"
-            srcset="./img/bg-mobile-p1.svg"
-          />
-
-          <!-- Imagem para telas médias (min-width: 600px) e grandes (min-width: 1200px) -->
-          <source
-            class="bg-inicio"
-            media="(max-width: 991px)"
-            srcset="./img/bg-tablet-p1.svg"
-          />
-          <source
-            class="bg-inicio"
-            media="(max-width: 1200px)"
-            srcset="./img/bg-desktop-p1.svg"
-          />
-          <source
-            class="bg-inicio"
-            media="(min-width: 1200px)"
-            srcset="./img/bg-large-desktop-p1.svg"
-          />
-
-          <!-- Fallback para navegadores que não suportam a tag picture -->
-          <img src="./img/bg-mobile-p1" alt="Circulos coloridos ofuscados" />
-        </picture>
+      <section id="inicio">
         <!-- parágrafo do inicio -->
         <p id="presentatio-paragraph">
           Onde o design inovador e singular transforma visões em realidade.
@@ -102,21 +73,19 @@
         </a>
       </section>
       <!-- Página sobre  -->
-      <section id="sobre" class="container">
+      <section id="sobre">
         <!-- gif da página sobre -->
         <div id="container-sobre">
           <img
             id="about-image"
-            src="./img/gif-sobre.gif"
-            alt="Gato preto pulando pegando uma bolinha"
+            src="./img/image-sobre.svg"
+            alt="Logo da crativ colorida"
           />
           <p class="paragraph">
-            Capturamos a atenção das pessoas com uma estratégia infalível,
-            hipnose. Assim como um gato não resiste a uma bola de linha de
-            tricô, seus clientes perderão a nossa do tempo ao acessar seu site e
-            se surpreender com tanta criatividade. A diferença não é o
-            suficiente para se destacar, é preciso ir além do que se pode
-            imaginar. Nós vamos além por você.
+            Nosso diferencial está na criatividade. Nossas técnicas e processos
+            criados por nós mesmos para desenvolver uma marca única e coesa com
+            o seu público fez de nós o número um no mercado de identidade
+            visual.
           </p>
         </div>
       </section>

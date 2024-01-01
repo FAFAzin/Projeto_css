@@ -7,7 +7,8 @@ const logo = document.getElementById('logo');
 const mainContainer = document.getElementById('main');
 const links = document.querySelectorAll('.item');
 const footer = document.getElementById('footer');
-
+const body = document.getElementById('body');
+const paragraph = document.getElementById('presentatio-paragraph');
 /**
  * Fecha o menu. Essa função está sendo usada dentro de outra função chamada toggleMenu.
  * @param {void}
@@ -22,6 +23,8 @@ const closeMenu = () => {
   footer.style.display = 'block';
   nav.style.borderRadius = '3rem';
   logo.style.display = 'block';
+  body.style.backgroundColor = 'transparent';
+  paragraph.style.display = 'block';
 };
 
 /**
@@ -38,6 +41,8 @@ const toggleMenu = () => {
     footer.style.display = 'none';
     nav.style.borderRadius = '2rem 2rem 0 0';
     logo.style.display = 'none';
+    body.style.backgroundColor = '#00000051';
+    paragraph.style.display = 'none';
   } else {
     closeMenu();
   }

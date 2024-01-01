@@ -8,7 +8,7 @@
   --global-backgound-color: #ffffff;
 
   /*config header*/
-  --header-background: hsla(163, 29%, 75%, 0.3);
+  --header-background: hsla(0, 0%, 51%, 0.3);
   --header-font-size: 1rem;
   --header-font-weigth: 500;
   --header-min-width: 40%;
@@ -20,28 +20,16 @@
   --header-border-radius: 3rem;
   --header-z-index: 10;
 
+  /* config paragraph */
+  --paragraph-font-size-mobile: 1.3rem;
+  --paragraph-width-mobile: 75%;
+  --paragraph-margin-mobile: 1rem 0;
+  --paragraph-text-align: start;
+
   /* button config */
   --color-background-button: #f9bc60;
   --size-button: 5rem;
   --padding-button: 2.5rem;
-
-  /* title config*/
-  --font-size-title-mobile: 2rem;
-  --tablet-fon-size: 3rem;
-  --font-size-title-desktop: 4rem;
-  --margin-title-mobile: 5rem 0 2.5rem 0;
-  --margin-title-desktop: 7rem 0 4.5rem 0;
-  --text-align-title: center;
-
-  /* config paragraph */
-  --font-size-paragraph-mobile: 1.2rem;
-  --desktop-font-size-paragraph: 1.3rem;
-  --desktop-width-paragraph: 40%;
-  --tablet-size-paragraph: 1.3rem;
-  --tablet-width-paragraph: 85%;
-  --width-paragraph-mobile: 90%;
-  --margin-paragraph-mobile: 1rem 0;
-  --text-align-paragraph: justify;
 
   /* config card */
   --card-background-color: #ffffff;
@@ -62,6 +50,9 @@
 body,
 html {
   overflow-x: hidden;
+}
+body {
+  background: url(./img/bg-mobile-all.svg) no-repeat;
   width: 100vw;
   font-family: var(--global-font);
   color: var(--global-color-text-black);
@@ -82,6 +73,12 @@ header {
   z-index: var(--header-z-index);
   height: var(--header-heigth);
   width: var(--header-main-width);
+}
+.paragraph {
+  font-size: var(--paragraph-font-size-mobile);
+  width: var(--paragraph-width-mobile);
+  margin: 2rem 0;
+  text-align: var(--paragraph-text-align);
 }
 #cliente-button {
   display: none;
@@ -108,7 +105,6 @@ header {
   justify-content: center;
   width: 100%;
   height: 50vh;
-  transition: top 0.3s;
   background-color: var(--header-background);
   border-radius: 0 0 2rem 2rem;
 }
@@ -139,14 +135,15 @@ header {
 }
 
 /* ========== Pages =========== */
+
 /* home page */
 #inicio {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #000000;
-  width: 100vw;
+  color: var(--global-backgound-color);
+  width: 100%;
+  height: 100vh;
 }
 .bg-inicio {
   position: absolute;
@@ -158,10 +155,10 @@ header {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 65%;
   height: 100%;
-  margin-top: 30%;
-  font-size: 1.6rem;
+  margin-top: 80%;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -192,21 +189,27 @@ header {
 }
 
 /* About */
-#sobre {
+#sobre,
+#container-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+#sobre {
+  width: 100%;
+  height: 100vh;
+}
 
 #about-image {
-  width: 60%;
+  width: 80%;
   height: auto;
-  margin: 0.5rem 0;
+  margin-top: 5rem;
 }
 
 /* Galeria */
 #galeria {
+  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -337,21 +340,58 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /* background */
+  body {
+    background: url(./img/bg-tablet-p1.svg) no-repeat;
+  }
   #button__menu {
     position: absolute;
     right: 0.8rem;
     bottom: 0.6rem;
   }
+  #presentatio-paragraph {
+    margin-top: 65%;
+  }
+  .paragraph {
+    width: 62%;
+    font-size: 1.4rem;
+  }
+  /* Pages */
+  #about-image {
+    width: 60%;
+    height: auto;
+    margin-top: 5rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) {
+  .paragraph {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  #presentatio-paragraph {
+    margin-top: 50%;
+    font-size: 2rem;
+  }
+  #about-image {
+    width: 50%;
+    height: auto;
+    margin-top: 5rem;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  body {
+    background: url(./img/bg-desktop-p1.svg) no-repeat;
+  }
   header {
     width: 80%;
+  }
+  #presentatio-paragraph {
+    margin-top: 45%;
+    width: 50%;
   }
   #cliente-button {
     display: flex;
@@ -388,6 +428,27 @@ footer {
   #button__menu {
     display: none;
   }
+  .paragraph {
+    width: 40%;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+  #sobre,
+  #container-sobre {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  #sobre {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #about-image {
+    width: 40%;
+    height: auto;
+    margin-bottom: 4rem;
+  }
   form {
     width: 60%;
     padding: 2rem 3rem;
@@ -401,14 +462,77 @@ footer {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  body {
+    background: url(./img/bg-large-desktop.svg) no-repeat;
+    background-size: 100%;
+  }
   header {
-    width: 60%;
+    width: 65%;
+  }
+  #logo {
+    margin: 0.8rem 0 0 0.5rem;
+  }
+  #cliente-button {
+    width: 30%;
+  }
+  #presentatio-paragraph {
+    margin-top: 35%;
+    width: 50%;
+    font-size: 2.5rem;
+  }
+  #about-image {
+    width: 30%;
+    height: auto;
+    margin-bottom: 4rem;
   }
 }
-/* aparecer lentamente */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+@media only screen and (min-width: 1550px) {
+  header {
+    width: 100%;
+    height: 4rem;
+    justify-content: center;
+  }
+  #presentatio-paragraph {
+    margin-top: 20%;
+    width: 35%;
+    font-size: 4rem;
+  }
+  #nav {
+    height: 4rem;
+    width: 30%;
+  }
+  #nav__menu {
+    width: 60%;
+    height: 3.5rem;
+  }
+  #logo {
+    margin: 0.8rem 0 0 0.5rem;
+  }
+
+  .nav__menu-link {
+    font-size: 1.3rem;
+    color: var(--global-color-text-black);
+  }
+  #cliente-button {
+    width: 10%;
+    height: 4rem;
+    font-size: 1.3rem;
+  }
+  .paragraph {
+    width: 25%;
+    font-size: 2rem;
+  }
+  #down {
+    left: 18%;
+  }
+  #about-image {
+    width: 20%;
+  }
+  /* aparecer lentamente */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 }
 @keyframes slideRightToLeft {
@@ -460,5 +584,13 @@ to {
     transform: translateY(
       -10px
     ); /* Ajuste a altura da flutuação conforme necessário */
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
