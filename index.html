@@ -29,7 +29,6 @@
   <body id="body">
     <!-- header -->
     <header id="header">
-      <a href="#" id="cliente-button">sou cliente</a>
       <nav id="nav">
         <a href="#inicio">
           <img
@@ -44,23 +43,23 @@
         </a>
         <ul id="nav__menu">
           <li class="item">
-            <a href="#inicio" class="nav__menu-link">INICIO</a>
+            <a href="#inicio" class="nav__menu-link">inicio</a>
           </li>
           <li class="item">
-            <a href="#sobre" class="nav__menu-link">SOBRE</a>
+            <a href="#sobre" class="nav__menu-link">sobre</a>
           </li>
           <li class="item">
-            <a href="#galeria" class="nav__menu-link">GALERIA</a>
+            <a href="#galeria" class="nav__menu-link">galeria</a>
           </li>
           <li class="item">
-            <a href="#contato" class="nav__menu-link">CONTATO</a>
+            <a href="#contato" class="nav__menu-link">contato</a>
           </li>
         </ul>
       </nav>
     </header>
     <!-- main -->
     <main id="main">
-      <!-- Página inicial -->
+      <!-- +++++++++++++ inicio ++++++++++ -->
       <section id="inicio">
         <!-- parágrafo do inicio -->
         <p id="presentatio-paragraph">
@@ -72,32 +71,30 @@
           <img src="./icons/Arrow-scroll.svg" id="down" />
         </a>
       </section>
-      <!-- Página sobre  -->
+      <!-- +++++++++++++ sobre +++++++++++  -->
       <section id="sobre">
-        <!-- gif da página sobre -->
-        <div id="container-sobre">
-          <img
-            id="about-image"
-            src="./img/image-sobre.svg"
-            alt="Logo da crativ colorida"
-          />
-          <p class="paragraph">
-            Nosso diferencial está na criatividade. Nossas técnicas e processos
-            criados por nós mesmos para desenvolver uma marca única e coesa com
-            o seu público fez de nós o número um no mercado de identidade
-            visual.
-          </p>
-        </div>
+        <!-- video da página sobre -->
+        <iframe
+          width="85%"
+          height="300px"
+          src="https://www.youtube.com/embed/QfTm8mIpKkc?si=TgIU3bLx8O42i5x0"
+          title="Processo criativo logotipo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <p class="paragraph">
+          Nosso diferencial está na criatividade. Nossas técnicas e processos
+          criados por nós mesmos para desenvolver uma marca única e coesa com o
+          seu público fez de nós o número um no mercado de identidade visual.
+        </p>
       </section>
-      <!-- Página galeria -->
+      <!-- ++++++++++++ galeria +++++++++ -->
       <section id="galeria">
-        <!-- galeria de artes -->
         <section id="gallery__itens">
           <p class="paragraph">
-            Estes são alguns exemplos de nossos serviços e eu já posso adivinhar
-            uma coisa, você não está esperando tanta criatividade. Mas se
-            surpreenda, perceba que cada detalhe faz sentido em todas as logos
-            que já criamos.
+            Veja algumas de nossas artes. Todos nossos clientes ficam
+            satisfeitos com o resultado.
           </p>
           <ul id="container__gallery">
             <li>
@@ -139,7 +136,7 @@
           </ul>
         </section>
       </section>
-      <!-- Página contact -->
+      <!-- ++++++++++++ Contato +++++++++ -->
       <section id="contato" class="container">
         <p class="paragraph">
           Com mais de vinte anos entregando um design inovador e usando a
@@ -149,6 +146,7 @@
           grupo, seja <strong>Crativ</strong>
         </p>
         <form action="#">
+          <h1 id="h1-form">Contactar</h1>
           <label for="name">Nome</label>
           <input
             type="text"
@@ -180,10 +178,8 @@
             rows="5"
             placeholder="mais informações"
           ></textarea>
-          <div class="form-checkbox">
-            <label for="checkbox"
-              >Confirmo que li e aceitos os termos de crativ</label
-            >
+          <div id="form-checkbox">
+            <p id="p-checkbox">Confirmo que li e aceitos os termos de crativ</p>
             <input type="checkbox" name="checkbox" />
           </div>
           <button class="btn">

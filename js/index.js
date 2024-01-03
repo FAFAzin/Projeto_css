@@ -1,10 +1,9 @@
 // Elementos
-const headerContainer = document.getElementById('header');
-const showMenu = document.getElementById('button__menu');
-const menu = document.getElementById('nav__menu');
+const header = document.getElementById('header');
+const buttonMenu = document.getElementById('button__menu');
+const navMenu = document.getElementById('nav__menu');
 const nav = document.getElementById('nav');
-const logo = document.getElementById('logo');
-const mainContainer = document.getElementById('main');
+const main = document.getElementById('main');
 const links = document.querySelectorAll('.item');
 const footer = document.getElementById('footer');
 const body = document.getElementById('body');
@@ -15,15 +14,15 @@ const paragraph = document.getElementById('presentatio-paragraph');
  * @return {void}
  */
 const closeMenu = () => {
-  menu.style.display = 'none';
-  showMenu.style.transform = 'rotate(0deg)';
-  headerContainer.style.height = '10%';
-  mainContainer.style.display = 'block';
-  mainContainer.style.display = 'block';
-  footer.style.display = 'block';
+  if (innerWidth > 991) {
+  }
+  navMenu.style.display = 'none';
+  buttonMenu.style.transform = 'rotate(0deg)';
+  header.style.height = '10%';
+  main.style.display = 'block';
+  footer.style.display = 'flex';
   nav.style.borderRadius = '3rem';
-  logo.style.display = 'block';
-  body.style.backgroundColor = 'transparent';
+  nav.style.backgroundColor = 'hsla(0, 0%, 51%, 0.3)';
   paragraph.style.display = 'block';
 };
 
@@ -33,15 +32,14 @@ const closeMenu = () => {
  * @return {void}
  */
 const toggleMenu = () => {
-  if (menu.style.display === 'none') {
-    menu.style.display = 'flex';
-    showMenu.style.transform = 'rotate(45deg)';
-    headerContainer.style.height = '100vh';
-    mainContainer.style.display = 'block';
+  if (navMenu.style.display === 'none' && innerWidth < 992) {
+    navMenu.style.display = 'flex';
+    buttonMenu.style.transform = 'rotate(45deg)';
+    header.style.height = '100vh';
+    main.style.display = 'block';
     footer.style.display = 'none';
     nav.style.borderRadius = '2rem 2rem 0 0';
-    logo.style.display = 'none';
-    body.style.backgroundColor = '#00000051';
+    nav.style.backgroundColor = '#004643';
     paragraph.style.display = 'none';
   } else {
     closeMenu();
@@ -53,7 +51,6 @@ const toggleMenu = () => {
  */
 const closeMenuLink = () => {
   if (window.innerWidth > 991) {
-    return;
   } else {
     links.forEach((link) => {
       link.addEventListener('click', () => {
@@ -64,7 +61,7 @@ const closeMenuLink = () => {
 };
 
 //Abrir ou fechar o menu ao clicar no botão
-showMenu.addEventListener('click', (e) => {
+buttonMenu.addEventListener('click', (e) => {
   e.preventDefault();
 
   toggleMenu();
@@ -77,15 +74,4 @@ showMenu.addEventListener('click', (e) => {
  *  */
 document.addEventListener('DOMContentLoaded', () => {
   closeMenuLink();
-});
-
-const image = document.getElementById('image');
-/* Função trocar formas */
-const a = () => {
-  const number = Math.floor(Math.random() * 6);
-  image.src = `./icons/form${number}.svg`;
-  console.log(number);
-};
-image.addEventListener('click', () => {
-  a();
 });
