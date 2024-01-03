@@ -1,2 +1,9 @@
-Onde parei?
-Estou solucionando o seguinte problema, o menu desktop está none quando carregado e o menu mobile não está fechando ao clicar no link.
+Empresa: Criadora de identidade visual
+
+- Mobile First
+- Variáveis CSS
+- Flexbox
+- Gradiente
+- Animação
+- Pouco JS
+- Open graph
