@@ -6,7 +6,6 @@ const nav = document.getElementById('nav');
 const main = document.getElementById('main');
 const links = document.querySelectorAll('.item');
 const footer = document.getElementById('footer');
-const body = document.getElementById('body');
 const paragraph = document.getElementById('presentatio-paragraph');
 /**
  * Fecha o menu. Essa função está sendo usada dentro de outra função chamada toggleMenu.
@@ -46,6 +45,13 @@ const toggleMenu = () => {
   }
 };
 
+//Abrir ou fechar o menu ao clicar no botão
+buttonMenu.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  toggleMenu();
+});
+
 /**
  * Fechar menu o clicar nos links
  */
@@ -59,14 +65,6 @@ const closeMenuLink = () => {
     });
   }
 };
-
-//Abrir ou fechar o menu ao clicar no botão
-buttonMenu.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  toggleMenu();
-});
-
 /**
  * Este evento usa a função closeMenuLink que é usada para fechar o menu quando algum link for clicado.
  *
